@@ -1,4 +1,3 @@
-
 class Gitgulf < Formula
   desc "GitGulf CLI tool"
   homepage "https://github.com/tychop/gitgulf"
@@ -18,36 +17,36 @@ class Gitgulf < Formula
     # Alias installations
     (bin/"ggs").write <<~EOS
       #!/bin/bash
-      exec "#{bin}/gitgulf" status "$@"
+      "#{bin}/gitgulf" status "$@"
     EOS
     (bin/"ggf").write <<~EOS
       #!/bin/bash
-      exec "#{bin}/gitgulf" fetch "$@"
+      "#{bin}/gitgulf" fetch "$@"
     EOS
     (bin/"ggp").write <<~EOS
       #!/bin/bash
-      exec "#{bin}/gitgulf" pull "$@"
+      "#{bin}/gitgulf" pull "$@"
     EOS
     (bin/"ggd").write <<~EOS
       #!/bin/bash
-      exec "#{bin}/gitgulf" development "$@"
+      "#{bin}/gitgulf" development "$@"
     EOS
     (bin/"ggm").write <<~EOS
       #!/bin/bash
-      exec "#{bin}/gitgulf" master "$@"
+      "#{bin}/gitgulf" master "$@"
     EOS
     (bin/"ggb").write <<~EOS
       #!/bin/bash
-      exec "#{bin}/gitgulf" -b "$@"
+      "#{bin}/gitgulf" -b "$@"
     EOS
 
     # Make the scripts executable
-    bin.install_symlink bin/"ggs"
-    bin.install_symlink bin/"ggf"
-    bin.install_symlink bin/"ggp"
-    bin.install_symlink bin/"ggd"
-    bin.install_symlink bin/"ggm"
-    bin.install_symlink bin/"ggb"
+    (bin/"ggs").chmod 0755
+    (bin/"ggf").chmod 0755
+    (bin/"ggp").chmod 0755
+    (bin/"ggd").chmod 0755
+    (bin/"ggm").chmod 0755
+    (bin/"ggb").chmod 0755
   end
 
   test do
