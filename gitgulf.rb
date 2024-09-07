@@ -3,7 +3,7 @@ class Gitgulf < Formula
   desc "GitGulf CLI tool"
   homepage "https://github.com/tychop/gitgulf"  # Update this to your repository
   url "https://github.com/tychop/GitGulf/archive/refs/tags/v0.1.0.tar.gz"  # Update this to your tarball URL
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  sha256 "f2410e9f0bf80e8c436b24c58a2c4db82482b94d3c58024159f9f8b6998136fc"
   license "MIT"
 
   # Dependencies, if any
