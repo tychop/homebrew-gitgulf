@@ -1,17 +1,18 @@
 
 class Gitgulf < Formula
   desc "GitGulf CLI tool"
-  homepage "https://github.com/tychop/gitgulf"  # Update this to your repository
-  url "https://github.com/tychop/GitGulf/archive/refs/tags/v0.1.0.tar.gz"  # Update this to your tarball URL
+  homepage "https://github.com/tychop/gitgulf"
+  url "https://github.com/tychop/GitGulf/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "f2410e9f0bf80e8c436b24c58a2c4db82482b94d3c58024159f9f8b6998136fc"
   license "MIT"
 
-  # Dependencies, if any
   depends_on :xcode => ["15.0", :build]
   depends_on "swift"
 
   def install
-    system "swift", "build", "-c", "release"
+    ENV.deparallelize  # Ensure build is done in a writable directory
+    system "swift", "build", "-c", "release", "--disable-sandbox"  # Disable sandbox to avoid issues
+
     bin.install ".build/release/gitgulf"
 
     # Alias installations
