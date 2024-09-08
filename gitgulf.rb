@@ -2,7 +2,7 @@ class Gitgulf < Formula
   desc "GitGulf CLI tool"
   homepage "https://github.com/tychop/gitgulf"
   url "https://github.com/tychop/GitGulf/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "f2410e9f0bf80e8c436b24c58a2c4db82482b94d3c58024159f9f8b6998136fc"
+  sha256 "a2d1f684643ce7611b1d47ac9490b3a2305decaf9cd76400010755a5ebbdb309"
   license "MIT"
 
   depends_on :xcode => ["15.0", :build]
