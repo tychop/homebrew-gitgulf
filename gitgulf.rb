@@ -6,7 +6,6 @@ class Gitgulf < Formula
   license "MIT"
 
   depends_on :xcode => ["15.0", :build]
-  depends_on "swift"
 
   def install
     ENV.deparallelize  # Ensure build is done in a writable directory
