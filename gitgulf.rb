@@ -7,7 +7,7 @@ class Gitgulf < Formula
   license "MIT"
 
   def install
-    bin.install "gitgulf"
+    bin.install ".build/release/gitgulf"
 
     # Alias installations
     (bin/"ggs").write <<~EOS
