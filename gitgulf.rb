@@ -1,14 +1,13 @@
 class Gitgulf < Formula
   desc "GitGulf CLI tool"
   homepage "https://github.com/tychop/gitgulf"
-  url "https://github.com/tychop/GitGulf/archive/refs/tags/v0.1.5.tar.gz"
-  sha256 "a9ed6cef9bbbb431b6868a73f93cbd523dd6c576eb2465146cda9cf28484e811"
+  url "https://github.com/tychop/GitGulf/releases/download/v0.1.5/gitgulf-0.1.5-macos-arm64.tar.gz"
+  sha256 "f6da4bbb0fa6338ab941f69f9dd9992ebb079c25dc447af67fd817d701639280"
+  version "0.1.5"
   license "MIT"
 
   def install
-    system "swift", "build", "-c", "release"
-
-    bin.install ".build/release/gitgulf"
+    bin.install "gitgulf"
 
     # Alias installations
     (bin/"ggs").write <<~EOS
