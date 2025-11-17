@@ -22,7 +22,7 @@ class Gitgulf < Formula
       #!/bin/bash
       "#{bin}/gitgulf" pull "$@"
     EOS
-    (bin/"ggr").write <<~EOS
+    (bin/"ggpr").write <<~EOS
       #!/bin/bash
       "#{bin}/gitgulf" rebase "$@"
     EOS
@@ -43,7 +43,7 @@ class Gitgulf < Formula
     (bin/"ggs").chmod 0755
     (bin/"ggf").chmod 0755
     (bin/"ggp").chmod 0755
-    (bin/"ggr").chmod 0755
+    (bin/"ggpr").chmod 0755
     (bin/"ggd").chmod 0755
     (bin/"ggm").chmod 0755
     (bin/"ggb").chmod 0755
