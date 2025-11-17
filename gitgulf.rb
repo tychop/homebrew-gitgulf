@@ -1,15 +1,12 @@
 class Gitgulf < Formula
   desc "GitGulf CLI tool"
   homepage "https://github.com/tychop/gitgulf"
-  url "https://github.com/tychop/GitGulf/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "bd06c253d594d03ee9c3d41d1025d44084c59d2475afbe8c1f40f22d6ab78aa5"
+  url "https://github.com/tychop/GitGulf/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "a9ed6cef9bbbb431b6868a73f93cbd523dd6c576eb2465146cda9cf28484e811"
   license "MIT"
 
-  depends_on :xcode => ["15.0", :build]
-
   def install
-    ENV.deparallelize  # Ensure build is done in a writable directory
-    system "swift", "build", "-c", "release", "--disable-sandbox"  # Disable sandbox to avoid issues
+    system "swift", "build", "-c", "release"
 
     bin.install ".build/release/gitgulf"
 
