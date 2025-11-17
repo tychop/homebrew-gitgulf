@@ -1,9 +1,9 @@
 class Gitgulf < Formula
   desc "GitGulf CLI tool"
   homepage "https://github.com/tychop/gitgulf"
-  url "https://github.com/tychop/GitGulf/releases/download/v0.2.1/gitgulf-0.2.1-macos-arm64.tar.gz"
-  sha256 "bd157113a32b847f92c3c9540ea6f3d9edeac19f24c005e79fb3a038b944a1c0"
-  version "0.2.1"
+  url "https://github.com/tychop/GitGulf/releases/download/v0.3.0/gitgulf-0.3.0-macos-arm64.tar.gz"
+  sha256 "5b12f5e291f5eee3d0898197e1414c2f61c94d8546d89f021f171ac1b9d7b75c"
+  version "0.3.0"
   license "MIT"
 
   def install
