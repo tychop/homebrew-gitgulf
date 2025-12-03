@@ -6,7 +6,7 @@ class Gitgulf < Formula
   on_macos do
     on_arm do
       url "https://github.com/tychop/GitGulf/releases/download/v#{version}/gitgulf-macos-arm64"
-      sha256 "6f5dd1436ef80ee3a00d8187cf392cfbda2b7fe2970a3dd365887da00a527b1e"
+      sha256 "49861c1f38ca114b79048c4097868b544eb49335a36280e7ebcc6ec1b062b5ef"
     end
   end
 
