@@ -6,12 +6,51 @@ class Gitgulf < Formula
   on_macos do
     on_arm do
       url "https://github.com/tychop/GitGulf/releases/download/v#{version}/gitgulf-macos-arm64"
-      sha256 "a128d44bd4db4ac695becc027548952e2542340c2ff42c1729615835f9c1ce9d"
+      sha256 "6f5dd1436ef80ee3a00d8187cf392cfbda2b7fe2970a3dd365887da00a527b1e"
     end
   end
 
   def install
     bin.install "gitgulf-macos-arm64" => "gitgulf"
+
+    # Alias installations
+    (bin/"ggs").write <<~EOS
+      #!/bin/bash
+      "#{bin}/gitgulf" status "$@"
+    EOS
+    (bin/"ggf").write <<~EOS
+      #!/bin/bash
+      "#{bin}/gitgulf" fetch "$@"
+    EOS
+    (bin/"ggp").write <<~EOS
+      #!/bin/bash
+      "#{bin}/gitgulf" pull "$@"
+    EOS
+    (bin/"ggpr").write <<~EOS
+      #!/bin/bash
+      "#{bin}/gitgulf" rebase "$@"
+    EOS
+    (bin/"ggd").write <<~EOS
+      #!/bin/bash
+      "#{bin}/gitgulf" development "$@"
+    EOS
+    (bin/"ggm").write <<~EOS
+      #!/bin/bash
+      "#{bin}/gitgulf" master "$@"
+    EOS
+    (bin/"ggb").write <<~EOS
+      #!/bin/bash
+      "#{bin}/gitgulf" -b "$@"
+    EOS
+
+    # Make the scripts executable
+    (bin/"ggs").chmod 0755
+    (bin/"ggf").chmod 0755
+    (bin/"ggp").chmod 0755
+    (bin/"ggpr").chmod 0755
+    (bin/"ggd").chmod 0755
+    (bin/"ggm").chmod 0755
+    (bin/"ggb").chmod 0755
   end
 
   test do
