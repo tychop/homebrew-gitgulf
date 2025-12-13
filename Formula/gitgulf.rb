@@ -1,12 +1,12 @@
 class Gitgulf < Formula
   desc "Manage multiple git repositories from a single directory"
   homepage "https://github.com/tychop/GitGulf"
-  version "0.5.0"
+  version "0.6.0"
 
   on_macos do
     on_arm do
       url "https://github.com/tychop/GitGulf/releases/download/v#{version}/gitgulf-macos-arm64"
-      sha256 "049672c30682ca648b8054caf6ffb6ebc06822a2047009f3161bd368f27a5b3a"
+      sha256 "8602cb17541c6780326c0652acc66e33402e344d31957e7611b54a65395b80a9"
     end
   end
 
